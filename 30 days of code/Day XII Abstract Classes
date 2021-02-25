@@ -1,0 +1,32 @@
+import java.util.*;
+
+abstract class Book {
+    String title;
+    String author;
+    
+    Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+    
+    abstract void display();
+}
+
+
+class MyBook extends Book{
+    int price;
+    
+    
+    MyBook(String a,String b,int c){
+        super(a,b);
+        this.price = c;
+    }
+    void display(){
+        System.out.println("Title: "+this.title);
+        System.out.println("Author: "+this.author);
+        System.out.println("Price: "+this.price);
+    }
+    
+} 
+
+public class Solution {
